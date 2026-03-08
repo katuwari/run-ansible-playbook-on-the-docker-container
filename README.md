@@ -43,7 +43,16 @@ ENV PATH="/opt/ansible/bin:$PATH"
 WORKDIR /workspace
 ```
 
-## Docker runtime
+## Docker Setup
+
+### Build docker image
+Need to build the docker image by the following command
+```c
+❯ docker build -t ansible .
+```
+once the image build, it can be verified by "docker image ls <image name>"
+<img width="520" height="62" alt="image" src="https://github.com/user-attachments/assets/0ee899a3-3484-40ee-b161-dd3dd72778c8" />
+
 In this runtime, mounted a volume to the container which is consist of the ansible structure folder on the host machine and also mounted an ansible-galaxy that required
 ```c
 docker run -dit \
@@ -54,5 +63,3 @@ docker run -dit \
   bash
 ```
 
-once the image build, it can be verified by "docker image ls <image name>"
-<img width="520" height="62" alt="image" src="https://github.com/user-attachments/assets/0ee899a3-3484-40ee-b161-dd3dd72778c8" />
