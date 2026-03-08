@@ -13,7 +13,7 @@ This mini project creates a Docker container that is ready to run Ansible playbo
 - Ansible-core==2.13.13 (This version is suitable for network automation since it still support paramiko connection)
 
 ### Dockerfile
-
+In this dockerfile, defined the needed tools installation
 ```c
 FROM dhi.io/debian-base:trixie-debian13-dev
 
