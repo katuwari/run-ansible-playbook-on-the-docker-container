@@ -54,4 +54,5 @@ docker run -dit \
   bash
 ```
 
+once the image build, it can be verified by "docker image ls <image name>"
 <img width="520" height="62" alt="image" src="https://github.com/user-attachments/assets/0ee899a3-3484-40ee-b161-dd3dd72778c8" />
