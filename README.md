@@ -1,7 +1,11 @@
 # Create docker container to run ansible playbook 
-This mini project creates a Docker container that is ready to run Ansible playbooks.
+This mini project creates a Docker container that is ready to run Ansible playbooks. 
 
-## Gears
+## Benefit of using docker container to run ansible playbook
+
+- Consistent Environment
+- Easy dependencies Management
+- Version locking
 
 ### Docker
 
