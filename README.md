@@ -80,8 +80,8 @@ You can enter the running container using:
 ```c
 docker exec -t ansible bash
 ```
-<img width="736" height="101" alt="image" src="https://github.com/user-attachments/assets/75742517-8d16-42fc-ae7b-c1068d0c8f5d" />
 As shown below, the Ansible project structure from the host machine is mounted inside the container, allowing us to run ansible-playbook commands directly.
+<img width="736" height="101" alt="image" src="https://github.com/user-attachments/assets/75742517-8d16-42fc-ae7b-c1068d0c8f5d" />
 
 ### Result
 Now the container is ready to execute Ansible playbooks inside the mounted project directory.
