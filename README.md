@@ -42,3 +42,16 @@ ENV PATH="/opt/ansible/bin:$PATH"
 
 WORKDIR /workspace
 ```
+
+## Docker runtime
+In this runtime, mounted a volume to the container which is consist of the ansible structure folder on the host machine and also mounted an ansible-galaxy that required
+```c
+docker run -dit \
+  --name ansible \
+  -v ~/path/to/ansible/structure/folder/on/the/host:/workspace \
+  -v /path/to/.ansible:/root/.ansible \
+  ansible \
+  bash
+```
+
+<img width="520" height="62" alt="image" src="https://github.com/user-attachments/assets/0ee899a3-3484-40ee-b161-dd3dd72778c8" />
