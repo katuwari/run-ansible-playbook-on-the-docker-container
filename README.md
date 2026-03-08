@@ -7,6 +7,8 @@ This mini project creates a Docker container that is ready to run Ansible playbo
 - Easy dependencies Management
 - Version locking
 
+## Gears
+
 ### Docker
 
 - Docker version 26.1.5
