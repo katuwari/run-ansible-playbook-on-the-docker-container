@@ -73,3 +73,17 @@ As shown below, the Ansible project structure from the host machine is mounted i
 Now the container is ready to execute Ansible playbooks inside the mounted project directory.
 
 <img width="1270" height="658" alt="image" src="https://github.com/user-attachments/assets/a9f5f722-c2fa-42df-80fe-5eac5add5681" />
+
+## Further Improvement
+
+### Automating Ansible Execution on Git Merge
+
+To improve the workflow, the Ansible playbook can be executed automatically when code is merged into the main branch. This can be achieved using CI/CD pipelines such as GitHub Actions.
+
+When a pull request is merged into the main branch:
+
+1. The CI pipeline is triggered.
+2. The pipeline starts a container using the Ansible Docker image.
+3. The Ansible playbook is executed automatically.
+
+This ensures that infrastructure changes are applied immediately after code changes are merged.
