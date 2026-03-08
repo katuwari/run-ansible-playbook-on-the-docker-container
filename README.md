@@ -1,5 +1,5 @@
 # Create docker container to run ansible playbook 
-This mini project creates a Docker container that is ready to run Ansible playbooks
+This mini project creates a Docker container that is ready to run Ansible playbooks.
 
 ## Gears
 
@@ -10,10 +10,11 @@ This mini project creates a Docker container that is ready to run Ansible playbo
 
 ### Ansible
 
-- Ansible-core==2.13.13 (This version is suitable for network automation since it still support paramiko connection)
-
+- Ansible-core==2.13.13
+  This version is suitable for network automation since it still supports the paramiko connection plugin.
+  
 ### Dockerfile
-In this dockerfile, defined the needed tools installation
+This Dockerfile defines the installation of the required tools.
 ```c
 FROM dhi.io/debian-base:trixie-debian13-dev
 
@@ -45,16 +46,21 @@ WORKDIR /workspace/gs
 
 ## Docker Setup
 
-### Build docker image
-Need to build the docker image by the following command
+### Build Docker Image
+Build the Docker image using the following command:
 ```c
-❯ docker build -t ansible .
+docker build -t ansible .
 ```
-once the image build, it can be verified by "docker image ls <image name>"
+Once the image is built, verify it with:
+```c
+docker image ls ansible
+```
 <img width="520" height="62" alt="image" src="https://github.com/user-attachments/assets/0ee899a3-3484-40ee-b161-dd3dd72778c8" />
 
 ### Run docker container
-In this runtime, mounted a volume to the container which is consist of the ansible structure folder on the host machine and also mounted an ansible-galaxy that required
+At runtime, we mount two volumes:
+- The Ansible project structure from the host machine
+- The .ansible directory containing installed roles/collections
 ```c
 docker run -dit \
   --name ansible \
@@ -63,11 +69,20 @@ docker run -dit \
   ansible \
   bash
 ```
-once done, it can be verified by "docker ps"
+Once the container is running, verify it using:
+```c
+docker ps
+```
 <img width="731" height="63" alt="image" src="https://github.com/user-attachments/assets/0de0a8bf-5f87-4a40-a909-273b169073dc" />
 
-### Docker exec 
+### Execute Commands in the Container
+You can enter the running container using:
+```c
+docker exec -t ansible bash
+```
 <img width="736" height="101" alt="image" src="https://github.com/user-attachments/assets/75742517-8d16-42fc-ae7b-c1068d0c8f5d" />
-shown that the ansible structure has mounted to the container so we might run the ansible-playbook
+As shown below, the Ansible project structure from the host machine is mounted inside the container, allowing us to run ansible-playbook commands directly.
 
+### Result
+Now the container is ready to execute Ansible playbooks inside the mounted project directory.
 <img width="1270" height="658" alt="image" src="https://github.com/user-attachments/assets/a9f5f722-c2fa-42df-80fe-5eac5add5681" />
