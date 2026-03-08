@@ -22,6 +22,7 @@ This mini project creates a Docker container that is ready to run Ansible playbo
 ### Dockerfile
 
 The Dockerfile defines the installation of the required tools.
+[Dockerfile](./Dockerfile)
 
 ## Docker Setup
 
